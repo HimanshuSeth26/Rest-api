@@ -19,6 +19,10 @@ const post = require("./model/post")
 app.use(bodyparser.json())
     .use(morgan()) 
 
+//Routes
+
+app.use("/posts", require("./routes//posts"))
+/*
 
 app.get("/posts", async (req, res) => {
     try {
@@ -95,7 +99,7 @@ app.post("/posts", async(req, res) => {
     }
     
 
-})
+}) */
 
 app.listen(3001, function () {
     console.log("Server is running on port 3001")
